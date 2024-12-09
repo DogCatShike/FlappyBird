@@ -18,12 +18,28 @@ public class AssetsCore
 
     public void LoadAll()
     {
-        //TODO
+        {
+            //AssetLabelReference 标签
+            AssetLabelReference labelReference = new AssetLabelReference();
+            labelReference.labelString = "Entity";
+            var ptr = Addressables.LoadAssetsAsync<GameObject>(labelReference, null);
+            var list = ptr.WaitForCompletion();
+            foreach (var go in list) 
+            {
+                entities.Add(go.name, go);
+            }
+            entitiesHandle = ptr;
+        }
     }
 
     public void UnLoadAll()
     {
-        //TODO
+        //检查句柄是否有效
+        if(entitiesHandle.IsValid())
+        {
+            //释放资源
+            Addressables.Release(entitiesHandle);
+        }
     }
 
     //Entity

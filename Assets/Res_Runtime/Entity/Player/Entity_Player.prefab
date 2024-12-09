@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 4f626ad5e2828f14a9d39240dff95fc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c8951eedf7c18154b9aadc9d06752ca4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -179,8 +179,9 @@ GameObject:
   - component: {fileID: 3645307322978219632}
   - component: {fileID: 4367086617474345886}
   - component: {fileID: 1056034990858563880}
+  - component: {fileID: 1685830741093422714}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Entity_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,6 +267,23 @@ CircleCollider2D:
   m_Offset: {x: -0.1455644, y: 0}
   serializedVersion: 2
   m_Radius: 0.32116374
+--- !u!114 &1685830741093422714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748418840262343618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69344051826a24e897653bb32fbdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  typeID: 0
+  rb: {fileID: 0}
+  ani: {fileID: 0}
+  force: 0
 --- !u!1 &5697242544530369240
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +356,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 7afbd7b0ec34e6344afde04020c8d767, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

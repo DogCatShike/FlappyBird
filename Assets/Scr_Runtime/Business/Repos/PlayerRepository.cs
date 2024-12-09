@@ -24,5 +24,30 @@ public class PlayerRepository
         all.Remove(entity.id);
     }
 
-    //TODO
+    //获取Player？
+    public int TakeAll(out PlayerEntity[] array)
+    {
+        if(all.Count > temArray.Length)
+        {
+            temArray = new PlayerEntity[all.Count * 2];
+        }
+        all.Values.CopyTo(temArray, 0);
+
+        array = temArray;
+        return all.Count;
+    }
+
+    //返回Player
+    public PlayerEntity Find(Predicate<PlayerEntity> predicate)
+    {
+        foreach(PlayerEntity player in all.Values)
+        {
+            bool isMatch = predicate(player);
+            if(isMatch)
+            {
+                return player;
+            }
+        }
+        return null;
+    }
 }
